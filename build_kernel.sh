@@ -13,7 +13,7 @@ export USE_CCACHE=1
 
 # Set variable toolchain flags for building
 export CROSS_COMPILE=$(pwd)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-buildroot-linux-gnu-
-export CC="ccache $(pwd)/prebuilts/clang/host/linux-x86/clang-r416183b/bin/clang"
+export CC=$(pwd)/prebuilts/clang/host/linux-x86/clang-r416183b/bin/clang
 export CLANG_TRIPLE=aarch64-buildroot-linux-gnu-
 
 # Set variable arch flags for building
@@ -42,7 +42,7 @@ fi
 
 GIT_TAGS=$(git describe --tag --abbrev=0)
 
-export LOCALVERSION="-$(echo $GIT_BRANCH)-A037F-Kernel"
+export LOCALVERSION="-$(echo $GIT_BRANCH)-A037F_Kernel-"
 
 export BASH_KBUILD_COMMAND="make -C $(pwd) O=$(pwd)/out"
 
