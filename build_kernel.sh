@@ -49,7 +49,7 @@ export BASH_KBUILD_COMMAND="make -C $(pwd) O=$(pwd)/out"
 # Function
 case $1 in
     "anykernel3")
-        git clone --depth=1 https://github.com/FranklinAzriel/AnyKernel3
+        git clone --depth=1 https://github.com/sakhaprox6839/AnyKernel3
         cp -rv out/arch/arm64/boot/Image.gz AnyKernel3
         cd AnyKernel3
         zip -r9 UPDATE-AnyKernel3.zip * -x .git README.md *placeholder
